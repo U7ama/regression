@@ -14,7 +14,7 @@ const markCommit = (date, callback) => {
 
     git.add([path]).commit(date, {
       "--date": date,
-      "--author": `Hashim-Aslam <GRWFSCMM2204423@pgc.edu.pk>`,
+      "--author": `U7ama<u7amajutt@gmail.com>`,
     }, (err) => {
       if (err) return console.error("Commit error:", err);
       console.log("Committed on:", date);
@@ -43,8 +43,8 @@ const makeCommits = (n, startDate, endDate) => {
   markCommit(date, () => makeCommits(n - 1, startDate, endDate)); 
 };
 
-const startDate = "2024-01-01T00:00:00Z";
-const endDate = "2024-05-31T23:59:59Z";
+const startDate = "2022-01-01T00:00:00Z";
+const endDate = "2022-12-31T23:59:59Z";
 
 makeCommits(100, startDate, endDate);
 //end
